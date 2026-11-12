@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twin Cities Animal Rescue | Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,23 +27,27 @@
         <section>
             <h2>Volunteer or Foster Interest Form</h2>
 
+            <p id="welcome-message" aria-live="polite"></p>
+
             <p>
                 Complete this form to tell us how you would like to support Twin
                 Cities Animal Rescue.
             </p>
 
-            <form action="#" method="post">
+            <form id="interest-form" action="#" method="post" novalidate>
                 <fieldset>
                     <legend>Your Contact Information</legend>
 
                     <p>
                         <label for="name">Full Name:</label>
                         <input type="text" id="name" name="name" required>
+                        <span id="name-error" class="error-message" aria-live="polite"></span>
                     </p>
 
                     <p>
                         <label for="email">Email Address:</label>
                         <input type="email" id="email" name="email" required>
+                        <span id="email-error" class="error-message" aria-live="polite"></span>
                     </p>
                 </fieldset>
 
@@ -57,7 +62,10 @@
                             <option value="foster">Fostering a pet</option>
                             <option value="adoption">Adoption information</option>
                         </select>
+                        <span id="interest-type-error" class="error-message" aria-live="polite"></span>
                     </p>
+
+                    <div id="interest-message" aria-live="polite"></div>
 
                     <p>
                         <label for="availability">Availability:</label>
@@ -68,23 +76,28 @@
                             <option value="weekends">Weekends</option>
                             <option value="flexible">My schedule is flexible</option>
                         </select>
+                        <span id="availability-error" class="error-message" aria-live="polite"></span>
                     </p>
 
                     <p>
                         <label for="experience">Experience With Pets:</label>
                         <textarea id="experience" name="experience" rows="5"
                                   minlength="20" required></textarea>
+                        <span id="experience-error" class="error-message" aria-live="polite"></span>
                     </p>
 
                     <p>
                         <label for="message">Short Message:</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
+                        <span id="message-error" class="error-message" aria-live="polite"></span>
                     </p>
                 </fieldset>
 
                 <p>
                     <button type="submit">Submit Interest Form</button>
                 </p>
+
+                <p id="form-message" aria-live="polite"></p>
             </form>
         </section>
 

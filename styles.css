@@ -192,3 +192,32 @@ footer {
         font-size: 1.3rem;
     }
 }
+.error-message {
+    display: block;
+    margin-top: 0.25rem;
+    color: #9B1C1C;
+    font-weight: bold;
+}
+
+.success-message {
+    padding: 0.75rem;
+    background-color: #E6F4EA;
+    color: #245B35;
+    border-left: 5px solid #245B35;
+    font-weight: bold;
+}
+
+#welcome-message {
+    padding: 0.75rem;
+    background-color: #FFF0E6;
+    color: #6B3E26;
+    border-left: 5px solid #D88C5A;
+    font-weight: bold;
+}
+
+#interest-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #FFF0E6;
+    border-radius: 4px;
+}
